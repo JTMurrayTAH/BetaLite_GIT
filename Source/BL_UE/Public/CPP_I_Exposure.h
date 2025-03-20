@@ -23,14 +23,13 @@ class BL_UE_API ICPP_I_Exposure
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category=Exposure)
 	float ReturnCurrentExposure();
 	
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category=Exposure)
 	EExposureType ReturnExposureType();
 	
-	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category=Exposure)
 	float ReturnExposureLevel(EExposureResistanceType SelectedLevel);
 	
 	

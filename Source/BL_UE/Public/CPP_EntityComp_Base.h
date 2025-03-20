@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CPP_I_Exposure.h"
 #include "Components/ActorComponent.h"
 #include "CPP_EntityComp_Base.generated.h"
 
