@@ -31,7 +31,8 @@ public:
 	//The Components levels of exposure : IE Low radiation for this entity could be 30.0
 	UPROPERTY(BlueprintReadWrite)
 	TMap<TEnumAsByte<EExposureResistanceType>, float> ExposureLevels;
-	
+
+	//Interface Functions.
 	virtual float ReturnCurrentExposure_Implementation() override;
 
 	virtual EExposureType ReturnExposureType_Implementation() override;
