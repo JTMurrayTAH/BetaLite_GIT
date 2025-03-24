@@ -36,18 +36,38 @@ public:
 	
 	// Functions
 #pragma region Getter Functions
-	UFUNCTION(BlueprintNativeEvent, Category="GetHealthValue")
+	UFUNCTION(BlueprintCallable, Category="Health|GetHealthValue")
 	float GetCurrentHealthValue() const;
 
-	UFUNCTION(BlueprintNativeEvent, Category="GetHealthValue")
+	UFUNCTION(BlueprintCallable, Category="Health|GetHealthValue")
 	float GetMaxHealthValue() const;
 
-	UFUNCTION(BlueprintNativeEvent, Category="GetHealthValue")
+	UFUNCTION(BlueprintCallable, Category="Health|GetHealthValue")
 	float GetRegenHealthValue() const;
 
-	UFUNCTION(BlueprintNativeEvent, Category="GetHealthValue")
+	UFUNCTION(BlueprintCallable, Category="Health|GetHealthValue")
 	float GetTimeBeforeHealValue() const;
 #pragma endregion
-	UFUNCTION(BlueprintNativeEvent, Category="SetHealthValue")
-	void SetHealthValue(float NewHealthValue);
+	
+#pragma region Setter Functions
+	UFUNCTION(BlueprintCallable, Category="Health|SetHealthValue")
+    	void SetHealthValue(float NewHealthValue);
+	
+	UFUNCTION(BlueprintCallable, Category="Health|SetHealthValue")
+		void SetMaxHealthValue(float NewMaxHealthValue);
+	
+	UFUNCTION(BlueprintCallable, Category="Health|SetHealthValue")
+		void SetRegenHealthValue(float NewRegenHealthValue);
+
+	UFUNCTION(BlueprintCallable, Category="Health|SetHealthValue")
+		void SetTimeBeforeHealValue(float NewTimeBeforeHealValue);
+#pragma endregion
+	
+
+#pragma region Base Functions
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category="Health|HealthFunctions")
+	void Heal(float HealAmount);
+	
+
+	#pragma endregion
 };
