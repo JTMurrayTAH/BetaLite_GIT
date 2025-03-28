@@ -9,6 +9,7 @@
 /**
  * 
  */
+
 UCLASS()
 class BL_UE_API UCPP_E_C_Health : public UCPP_EntityComp_Base
 {
@@ -70,4 +71,13 @@ public:
 	
 
 	#pragma endregion
+
+#pragma region Event Distpatcher
+	UDELEGATE(BlueprintAuthorityOnly)
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTakeAnyDMG, float, Damage, AActor*, DamagedActor, AActor*, DamageCauser);
+	
+	UPROPERTY(BlueprintAssignable, Category = "Test")
+	FTakeAnyDMG OnTestDelegate;
+
+#pragma endregion
 };
