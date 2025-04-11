@@ -8,7 +8,7 @@
 #include "CPP_EntityComp_Base.generated.h"
 
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, BlueprintType)
 class BL_UE_API UCPP_EntityComp_Base : public UActorComponent
 {
 	GENERATED_BODY()
